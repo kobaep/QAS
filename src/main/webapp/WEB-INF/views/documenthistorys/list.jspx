@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_foamtec_qas_domain_DocumentHistory" items="${documenthistorys}" z="eJ33s+zWy3Wig9FE4WW+V6OFblk=">
+        <table:table data="${documenthistorys}" id="l_com_foamtec_qas_domain_DocumentHistory" path="/documenthistorys" z="M3OxBWGRc7iSMCbBDI6FDL9TEO8=">
+            <table:column id="c_com_foamtec_qas_domain_DocumentHistory_createdBy" property="createdBy" z="F8EAtd0SKxeWPQt8aI9t+ZvDtYA="/>
+            <table:column id="c_com_foamtec_qas_domain_DocumentHistory_updatedBy" property="updatedBy" z="AulDvmfhA9DILWdWedMyk7tXyOQ="/>
+            <table:column id="c_com_foamtec_qas_domain_DocumentHistory_status" property="status" z="2t18SvsONOfkZ0XXql86GS8Rvcg="/>
+            <table:column date="true" dateTimePattern="${documentHistory_createddate_date_format}" id="c_com_foamtec_qas_domain_DocumentHistory_createdDate" property="createdDate" z="2G1hkcvUkdTW9euiatoKPWWv6l8="/>
+            <table:column date="true" dateTimePattern="${documentHistory_updateddate_date_format}" id="c_com_foamtec_qas_domain_DocumentHistory_updatedDate" property="updatedDate" z="efaRT30I9vBw/Jr6NnGC08VEf9w="/>
+            <table:column id="c_com_foamtec_qas_domain_DocumentHistory_actionBy" property="actionBy" z="G795RnTXleee2upeGxBkse5pTY0="/>
+        </table:table>
+    </page:list>
+</div>

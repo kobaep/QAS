@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="rohses/list">
+        <put-attribute name="body" value="/WEB-INF/views/rohses/list.jspx"/>
+    </definition>
+<definition extends="default" name="rohses/show">
+        <put-attribute name="body" value="/WEB-INF/views/rohses/show.jspx"/>
+    </definition>
+<definition extends="default" name="rohses/create">
+        <put-attribute name="body" value="/WEB-INF/views/rohses/create.jspx"/>
+    </definition>
+<definition extends="default" name="rohses/update">
+        <put-attribute name="body" value="/WEB-INF/views/rohses/update.jspx"/>
+    </definition>
+</tiles-definitions>
