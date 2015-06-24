@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_foamtec_qas_domain_DocumentHistory" object="${documenthistory}" path="/documenthistorys" z="IIy7kRhF+u1BVFvOQ70C1XLrkyM=">
+        <field:display field="createdBy" id="s_com_foamtec_qas_domain_DocumentHistory_createdBy" object="${documenthistory}" z="/QEp6smNfB3nmHigkWYw+Z2nOOo="/>
+        <field:display field="updatedBy" id="s_com_foamtec_qas_domain_DocumentHistory_updatedBy" object="${documenthistory}" z="FGEVwFo9G/BxVq6REeV6ekYQup4="/>
+        <field:display field="status" id="s_com_foamtec_qas_domain_DocumentHistory_status" object="${documenthistory}" z="9baxMTScZUkAddtvlccqXUGR8EU="/>
+        <field:display date="true" dateTimePattern="${documentHistory_createddate_date_format}" field="createdDate" id="s_com_foamtec_qas_domain_DocumentHistory_createdDate" object="${documenthistory}" z="FBwtVmnuPWHlbo0fULklHNUtogM="/>
+        <field:display date="true" dateTimePattern="${documentHistory_updateddate_date_format}" field="updatedDate" id="s_com_foamtec_qas_domain_DocumentHistory_updatedDate" object="${documenthistory}" z="xXUFzkZz0hiUcTwSgvJ9utT8fWQ="/>
+        <field:display field="actionBy" id="s_com_foamtec_qas_domain_DocumentHistory_actionBy" object="${documenthistory}" z="vXwxJbpJbDxBVAXNUPr0An9iWVI="/>
+        <field:display field="actionType" id="s_com_foamtec_qas_domain_DocumentHistory_actionType" object="${documenthistory}" z="9W+wJKmbyVA3d+uxnZ0DuUTtPTA="/>
+        <field:display field="currentStatus" id="s_com_foamtec_qas_domain_DocumentHistory_currentStatus" object="${documenthistory}" z="8hD99K54ieVKuLJ1eSDdM3MkOg4="/>
+        <field:display field="rohs" id="s_com_foamtec_qas_domain_DocumentHistory_rohs" object="${documenthistory}" z="6ibmk8aH+Izh8msOYjVqg1m4A7Y="/>
+    </page:show>
+</div>

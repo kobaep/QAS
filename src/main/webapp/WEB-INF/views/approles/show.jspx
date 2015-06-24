@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_foamtec_qas_security_AppRole" object="${approle}" path="/approles" z="WMp0qvdwzNh0vHosaa0SCF2gHVs=">
+        <field:display field="createdBy" id="s_com_foamtec_qas_security_AppRole_createdBy" object="${approle}" z="5Zq8QtPL+xNPWlSJBMiFV1nldjk="/>
+        <field:display field="updatedBy" id="s_com_foamtec_qas_security_AppRole_updatedBy" object="${approle}" z="yivjs2lOxLuCsVRL1ndB81UzLkY="/>
+        <field:display field="status" id="s_com_foamtec_qas_security_AppRole_status" object="${approle}" z="IiEKCPYj6lRmbeVgzP5dcFBZpzk="/>
+        <field:display date="true" dateTimePattern="${appRole_createddate_date_format}" field="createdDate" id="s_com_foamtec_qas_security_AppRole_createdDate" object="${approle}" z="gtKS+ElXcokAHTQ91IUBb8c4H74="/>
+        <field:display date="true" dateTimePattern="${appRole_updateddate_date_format}" field="updatedDate" id="s_com_foamtec_qas_security_AppRole_updatedDate" object="${approle}" z="U8O7P3BJa8DrBPHe6j52g93HJrg="/>
+        <field:display field="name" id="s_com_foamtec_qas_security_AppRole_name" object="${approle}" z="ZKA+0A16WlTVIffKObtk7mom41Y="/>
+        <field:display field="description" id="s_com_foamtec_qas_security_AppRole_description" object="${approle}" z="/XiKvtlRfwiQn7AXgbdQQM+QCos="/>
+    </page:show>
+</div>

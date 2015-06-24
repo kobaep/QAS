@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_foamtec_qas_security_AppUser" object="${appuser}" path="/appusers" z="hg9lzqQO2b0cdhmgBaGkgHVLGP4=">
+        <field:display field="createdBy" id="s_com_foamtec_qas_security_AppUser_createdBy" object="${appuser}" z="uqWM8MJD/Nhb+Wr5qxZPJpIZ4zM="/>
+        <field:display field="updatedBy" id="s_com_foamtec_qas_security_AppUser_updatedBy" object="${appuser}" z="p7qyiMvJDCZFMRSqGcMjGmiU20U="/>
+        <field:display field="status" id="s_com_foamtec_qas_security_AppUser_status" object="${appuser}" z="UheMl2dpPjSL1kRwrW8uoVv/h5E="/>
+        <field:display date="true" dateTimePattern="${appUser_createddate_date_format}" field="createdDate" id="s_com_foamtec_qas_security_AppUser_createdDate" object="${appuser}" z="PQ4vcfMjqeejZ1GxKSiTMA5HyzQ="/>
+        <field:display date="true" dateTimePattern="${appUser_updateddate_date_format}" field="updatedDate" id="s_com_foamtec_qas_security_AppUser_updatedDate" object="${appuser}" z="LC7wyoY7OYldyV1ekTSP/CCXxps="/>
+        <field:display field="username" id="s_com_foamtec_qas_security_AppUser_username" object="${appuser}" z="fsRCj/VSXBS67jT9WsHvvkXZVoM="/>
+        <field:display field="password" id="s_com_foamtec_qas_security_AppUser_password" object="${appuser}" z="/Xuv7Lk7h18EQdAcXvRZQnqHmjA="/>
+        <field:display field="name" id="s_com_foamtec_qas_security_AppUser_name" object="${appuser}" z="pC1xqR0yXPLh4iNIc9mRcMkrMrM="/>
+        <field:display field="enabled" id="s_com_foamtec_qas_security_AppUser_enabled" object="${appuser}" z="0ZM/OZ/h9OOBUrESI+q7yxbkhpY="/>
+        <field:display field="needLogin" id="s_com_foamtec_qas_security_AppUser_needLogin" object="${appuser}" z="Oja4uxJrRg5/lWmr2q3uRX6DFdI="/>
+        <field:display field="userEmail" id="s_com_foamtec_qas_security_AppUser_userEmail" object="${appuser}" z="gJn/0sH0+ZEGigtJkUdCM+OcahQ="/>
+        <field:display field="departmentCode" id="s_com_foamtec_qas_security_AppUser_departmentCode" object="${appuser}" z="BYsBT1lOgeBCZbHI5Rdoi13i9h4="/>
+        <field:display field="userRole" id="s_com_foamtec_qas_security_AppUser_userRole" object="${appuser}" z="DpeWlgtNOrdotFcg/KAXSRO24RU="/>
+    </page:show>
+</div>

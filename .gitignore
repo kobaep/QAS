@@ -7,3 +7,5 @@ target/*
 /target
 .idea/*
 *.zip
+QAS/*
+derby.log

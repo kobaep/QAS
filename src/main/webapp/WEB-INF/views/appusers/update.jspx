@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_foamtec_qas_security_AppUser" modelAttribute="appUser" path="/appusers" versionField="Version" z="0cG0PqnaLLwAtLPBSc95wnV6mtI=">
+        <field:input field="createdBy" id="c_com_foamtec_qas_security_AppUser_createdBy" z="1xzQE/xsAJwPeshCm5JQsOPJS1s="/>
+        <field:input field="updatedBy" id="c_com_foamtec_qas_security_AppUser_updatedBy" z="TE5Agvfw7ypmMBA25m9FtuiZilo="/>
+        <field:input field="status" id="c_com_foamtec_qas_security_AppUser_status" z="uUFg4Q0Wo6qP7/wJrtC+KnEFKPE="/>
+        <field:datetime dateTimePattern="${appUser_createddate_date_format}" field="createdDate" id="c_com_foamtec_qas_security_AppUser_createdDate" z="FHz0uPex3jodrMeiQWObXAIKejo="/>
+        <field:datetime dateTimePattern="${appUser_updateddate_date_format}" field="updatedDate" id="c_com_foamtec_qas_security_AppUser_updatedDate" z="SPgvYw+/SufrPdqSk/f41kolW6c="/>
+        <field:input field="username" id="c_com_foamtec_qas_security_AppUser_username" z="/9OMN6Vhu8pPLIBoDHUSG+CBlkw="/>
+        <field:input field="password" id="c_com_foamtec_qas_security_AppUser_password" z="Taolw5ketJwnd8AS1ZiGPbWuS9k="/>
+        <field:input field="name" id="c_com_foamtec_qas_security_AppUser_name" z="pZYX0TuquwgVzXRvaof9i1UGWOo="/>
+        <field:checkbox field="enabled" id="c_com_foamtec_qas_security_AppUser_enabled" z="fBLfqUmPkwx2wtggYtungIU67mo="/>
+        <field:checkbox field="needLogin" id="c_com_foamtec_qas_security_AppUser_needLogin" z="oa7YkEhTgojqIENNSq7I9Bh87Ok="/>
+        <field:input field="userEmail" id="c_com_foamtec_qas_security_AppUser_userEmail" z="x67mqw54SDsTF8EM21ThdPCD/xc="/>
+        <field:input field="departmentCode" id="c_com_foamtec_qas_security_AppUser_departmentCode" z="DcSVVOjYFsogB0UetN0VsXD+qwc="/>
+        <field:select field="userRole" id="c_com_foamtec_qas_security_AppUser_userRole" itemValue="id" items="${approles}" path="/approles" z="3wdAx63dybkIjS2DzO6njCXpIdc="/>
+    </form:update>
+</div>

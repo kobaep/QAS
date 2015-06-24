@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_foamtec_qas_security_AppRole" items="${approles}" z="OpQDnwMIbu5aNZUk0nsi3mHbna4=">
+        <table:table data="${approles}" id="l_com_foamtec_qas_security_AppRole" path="/approles" z="bZGj9MCvUI9BVBhbZ8E0RnIBDlA=">
+            <table:column id="c_com_foamtec_qas_security_AppRole_createdBy" property="createdBy" z="SbmNEb8/NoC/orH2Gn5peszdfrA="/>
+            <table:column id="c_com_foamtec_qas_security_AppRole_updatedBy" property="updatedBy" z="3el3Y2KtaSTQYIgOmBEFg0twC2s="/>
+            <table:column id="c_com_foamtec_qas_security_AppRole_status" property="status" z="gIkA4GtEunF4Wq42dUjj5Pugw0E="/>
+            <table:column date="true" dateTimePattern="${appRole_createddate_date_format}" id="c_com_foamtec_qas_security_AppRole_createdDate" property="createdDate" z="MihWHIboCwUG7+3TRhKEKfgjjUw="/>
+            <table:column date="true" dateTimePattern="${appRole_updateddate_date_format}" id="c_com_foamtec_qas_security_AppRole_updatedDate" property="updatedDate" z="2nUYa9eWtHzJUXuGVxERqouoHkU="/>
+            <table:column id="c_com_foamtec_qas_security_AppRole_name" property="name" z="qIuQKP25rrGVeVcZqw2Kkxtwu4A="/>
+        </table:table>
+    </page:list>
+</div>
