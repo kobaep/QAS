@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+
+    <jsp:useBean class="java.util.Date" id="now" scope="request" />
+    <fmt:formatDate pattern="dd/MM/yyyy" value="${now}" var="default" />
+    <spring:url var="rohs" value="/resources/images/foamtec/rohs2.png" />
+
+    <div class="row">
+        <div class="col-sm-12">
+            <ol class="breadcrumb">
+                <li>Rohs</li>
+                <li class="active">create</li>
+            </ol>
+            <div class="col-sm-7">
+                <form action="" method="POST" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="mat_code_id">MAT CODE</label>
+                        <div class="col-sm-8">
+                            <input id="mat_code_id" name="mat_code" type="text" class="form-control" autocomplete="off" placeholder="material code"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="des_mat_id">DESCRIPTION</label>
+                        <div class="col-sm-8">
+                            <input id="des_mat_id" name="des_mat" type="text" class="form-control" autocomplete="off" placeholder="material description"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="test_date_id">TEST DATE</label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <input id="test_date_id" name="test_date" class="form-control" autocomplete="off" placeholder="test date" value="${default}" />
+                                <span class="input-group-btn">
+                                    <button id="btn_test_date_id" class="btn btn-default" type="button"><span class="glyphicon glyphicon-calendar"><jsp:text/></span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">SPEC</label>
+                        <div class="col-sm-8">
+                            <input id="spec_id" type="file" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">MSDS</label>
+                        <div class="col-sm-8">
+                            <input id="msds_id" type="file" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="des_mat_id">SEND MAIL TO</label>
+                        <div class="col-sm-8">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-sm">
+                                        add email &#160;
+                                        <span class="glyphicon glyphicon-plus"><jsp:text/></span>
+                                    </button>
+                                </div>
+                                <div class="col-sm-12 hidden" id="email_list_id">
+                                    <jsp:text/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-5 visible-lg visible-md visible-sm">
+                <blockquote class="blockquote">
+                    <p><img src="${rohs}" /></p>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Email</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" autocomplete="off" placeholder="email" size="29" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default">Add</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        <![CDATA[
+
+        $(document).ready(function() {
+
+            $('input[type=file]').bootstrapFileInput();
+
+            $('#test_date_id').datepicker({
+                format: "dd/mm/yyyy"
+            });
+
+            $("#btn_test_date_id").click(function() {
+                $("#test_date_id").datepicker("show").on('changeDate', function(ev){
+                    $(this).datepicker('hide');
+                });
+            });
+
+        });
+
+        ]]>
+    </script>
+</div>

@@ -4,14 +4,20 @@
 
   <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap_css_url" />
   <spring:url value="/resources/css/starter-template.css" var="starter_css_url" />
+  <spring:url value="/resources/css/datepicker.css" var="datepicker_css_url" />
 
   <link rel="stylesheet" type="text/css" href="${bootstrap_css_url}" />
+  <link rel="stylesheet" type="text/css" href="${datepicker_css_url}" />
   <link rel="stylesheet" type="text/css" href="${starter_css_url}" />
 
   <spring:url value="/resources/js/jquery.min.js" var="jquery_js_url" />
   <spring:url value="/resources/js/bootstrap.min.js" var="bootstrap_js_url" />
+  <spring:url value="/resources/js/bootstrap-datepicker.js" var="datepicker_js_url" />
+  <spring:url value="/resources/js/bootstrap.file-input.js" var="file_upload_js_url" />
 
   <script src="${jquery_js_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
   <script src="${bootstrap_js_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+  <script src="${datepicker_js_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+  <script src="${file_upload_js_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
 
 </jsp:root>

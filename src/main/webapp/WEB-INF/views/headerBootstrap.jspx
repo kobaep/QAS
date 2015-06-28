@@ -3,6 +3,7 @@
 	<jsp:output omit-xml-declaration="yes" />
 
 	<spring:url var="home" value="/" />
+	<spring:url var="rohs" value="/rohses/create" />
 
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -21,7 +22,7 @@
 						<a href="#" class="dropdown-toggle capitalize" data-toggle="dropdown">RoHs</a>
 						<ul class="dropdown-menu" role="menu">
 							<li>
-								<a href="#">Insert RoHs</a>
+								<a href="${rohs}">Insert RoHs</a>
 								<a href="#">Serch RoHs</a>
 							</li>
 						</ul>

@@ -1,6 +1,7 @@
 body {
-  padding-top: 50px;
+  padding-top: 70px;
 }
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -11,18 +12,23 @@ body {
 }
 
 .bs-callout-info {
-    border-left-color: #1b809e;
+  border-left-color: #1b809e;
 }
 .bs-callout {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: #eee;
-    border-image: none;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px 1px 1px 5px;
-    margin: 20px 0;
-    padding: 20px;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #eee;
+  border-image: none;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px 1px 1px 5px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 26px;
 }
