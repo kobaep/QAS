@@ -35,6 +35,7 @@ privileged aspect RohsDataOnDemand_Roo_DataOnDemand {
         setEndDate(obj, index);
         setMatCode(obj, index);
         setMsds(obj, index);
+        setRohsDoc(obj, index);
         setSendEmailTo(obj, index);
         setSpec(obj, index);
         setStartDate(obj, index);
@@ -83,6 +84,11 @@ privileged aspect RohsDataOnDemand_Roo_DataOnDemand {
     public void RohsDataOnDemand.setMsds(Rohs obj, int index) {
         String msds = "msds_" + index;
         obj.setMsds(msds);
+    }
+    
+    public void RohsDataOnDemand.setRohsDoc(Rohs obj, int index) {
+        String rohsDoc = "rohsDoc_" + index;
+        obj.setRohsDoc(rohsDoc);
     }
     
     public void RohsDataOnDemand.setSendEmailTo(Rohs obj, int index) {

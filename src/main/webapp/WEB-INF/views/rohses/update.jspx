@@ -19,5 +19,6 @@
         <field:input field="approve1" id="c_com_foamtec_qas_domain_Rohs_approve1" z="liS8jTme6EidCIHjBRGaRYm4s+I="/>
         <field:input field="approve2" id="c_com_foamtec_qas_domain_Rohs_approve2" z="SvYZ0k2iXOp/SoWitCztEDvLiT0="/>
         <field:simple field="documentHistorys" id="c_com_foamtec_qas_domain_Rohs_documentHistorys" messageCode="entity_reference_not_managed" messageCodeAttribute="Document History" z="eUmX+uUy9eSmLISuWARROvWQM7g="/>
+        <field:input field="rohsDoc" id="c_com_foamtec_qas_domain_Rohs_rohsDoc" z="mZcIbIeDZGeCzvSNH8g+fyxKMUw="/>
     </form:update>
 </div>

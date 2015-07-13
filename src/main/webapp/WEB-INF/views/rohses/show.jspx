@@ -18,5 +18,6 @@
         <field:display field="workflow" id="s_com_foamtec_qas_domain_Rohs_workflow" object="${rohs}" z="lcIhFDlX5PNcMBcA+kWEI908rZM="/>
         <field:display field="approve1" id="s_com_foamtec_qas_domain_Rohs_approve1" object="${rohs}" z="ndJ7/su7XMtPgmTSQpR7YMuf1Lk="/>
         <field:display field="approve2" id="s_com_foamtec_qas_domain_Rohs_approve2" object="${rohs}" z="puO/PogUEA0istc7VvLVL52zUtQ="/>
+        <field:display field="rohsDoc" id="s_com_foamtec_qas_domain_Rohs_rohsDoc" object="${rohs}" z="PefPu4ZnSrQsmZyeDz/6MZCyWi4="/>
     </page:show>
 </div>

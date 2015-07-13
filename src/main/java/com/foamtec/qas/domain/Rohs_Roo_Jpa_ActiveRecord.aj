@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect Rohs_Roo_Jpa_ActiveRecord {
     
-    public static final List<String> Rohs.fieldNames4OrderClauseFilter = java.util.Arrays.asList("matCode", "description", "startDate", "endDate", "spec", "msds", "sendEmailTo", "workflow", "approve1", "approve2", "documentHistorys");
+    public static final List<String> Rohs.fieldNames4OrderClauseFilter = java.util.Arrays.asList("matCode", "description", "startDate", "endDate", "spec", "msds", "sendEmailTo", "workflow", "approve1", "approve2", "documentHistorys", "rohsDoc");
     
     public static long Rohs.countRohses() {
         return entityManager().createQuery("SELECT COUNT(o) FROM Rohs o", Long.class).getSingleResult();

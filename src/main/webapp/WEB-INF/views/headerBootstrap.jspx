@@ -42,4 +42,12 @@
 			</div>
 		</div>
 	</div>
+	<script>
+
+		var session = {
+            user: "${principal.username}",
+            context: '/' + (window.location.pathname.split('/')[1])
+        };
+
+	</script>
 </div> 

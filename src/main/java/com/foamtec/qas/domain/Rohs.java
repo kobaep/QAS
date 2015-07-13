@@ -70,4 +70,8 @@ public class Rohs extends BaseEntity {
      */
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "rohs")
     private Set<DocumentHistory> documentHistorys = new HashSet<DocumentHistory>();
+
+    /**
+     */
+    private String rohsDoc;
 }

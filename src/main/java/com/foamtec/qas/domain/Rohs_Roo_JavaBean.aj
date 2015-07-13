@@ -98,4 +98,12 @@ privileged aspect Rohs_Roo_JavaBean {
         this.documentHistorys = documentHistorys;
     }
     
+    public String Rohs.getRohsDoc() {
+        return this.rohsDoc;
+    }
+    
+    public void Rohs.setRohsDoc(String rohsDoc) {
+        this.rohsDoc = rohsDoc;
+    }
+    
 }
