@@ -64,4 +64,14 @@
 			</div>
 		</div>
 	</div>
+	<script>
+
+        if('${userDetail.username}'=="No UserName"){
+            location.href= '/' + (window.location.pathname.split('/')[1])+"/resources/j_spring_security_logout";
+        }
+
+        var session = {                                               // the other use for create request for other
+            context: '/' + (window.location.pathname.split('/')[1])            // the session currentOuCode
+        };
+    </script>
 </div> 

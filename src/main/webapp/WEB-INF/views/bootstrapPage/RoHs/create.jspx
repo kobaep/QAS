@@ -100,47 +100,60 @@
                     <button type="button" class="btn btn-default">Add</button>
                 </div>
             </div>
-          </div>
         </div>
     </div>
+</div>
 
-    <script type="text/javascript">
-        <![CDATA[
+<script type="text/javascript">
+    <![CDATA[
 
-        $(document).ready(function() {
+    $(document).ready(function() {
 
-            $('input[type=file]').bootstrapFileInput();
+        $("input[type=file]").bootstrapFileInput();
 
-            $('#test_date_id').datepicker({
-                format: "dd/mm/yyyy"
+        $("#test_date_id").datepicker({
+            format: "dd/mm/yyyy"
+        });
+
+        $("#btn_test_date_id").click(function() {
+            $("#test_date_id").datepicker("show").on("changeDate", function(ev){
+                $(this).datepicker("hide");
             });
+        });
 
-            $("#btn_test_date_id").click(function() {
-                $("#test_date_id").datepicker("show").on('changeDate', function(ev){
-                    $(this).datepicker('hide');
-                });
-            });
-
-            $('#save_id').submit(function() {
+        $("#save_id").submit(function() {
+            var specFile = document.getElementById("spec_id").files[0];
+            if (typeof specFile == "undefined") {
+                alert("no spec file");
+            } else {
+                var myForm = new FormData();
+                myForm.append("specFile", specFile);
+                myForm.append("specFile1", "specFile");
                 $.ajax({
-                    url: session['context']+'/',
+                    url: session['context']+'/rohses/uploadspecfile',
                     data: myForm,
                     dataType: 'text',
                     processData: false,
                     contentType: false,
                     type: 'POST',
                     success: function(data){
-                        alert(data);
+                        //console.info(data)
+                        if(data=="Upload Fail"){
+                            alert(false);
+                        }else{
+                            alert("finish.");
+                        }
                     },
                     error:function(){
-                        alert(false);
+                        alert("error");
                     }
                 });
-                return false;
-            });
-
+            }
+            return false;
         });
 
-        ]]>
-    </script>
+    });
+
+]]>
+</script>
 </div>
