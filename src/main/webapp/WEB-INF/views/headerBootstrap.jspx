@@ -5,6 +5,10 @@
 	<spring:url var="home" value="/" />
 	<spring:url var="rohs" value="/rohses/create" />
 
+	<spring:url var="delta" value="/barcode/delta" />
+	<spring:url var="other" value="/barcode/other" />
+	<spring:url var="fastatus" value="/fastatus/status" />
+
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -27,6 +31,24 @@
 							</li>
 						</ul>
 					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle capitalize" data-toggle="dropdown">Barcode</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="${delta}">delta</a>
+								<a href="${other}">other</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle capitalize" data-toggle="dropdown">FA</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="${fastatus}">Status</a>
+								<a href="#">Serch status</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
@@ -42,12 +64,4 @@
 			</div>
 		</div>
 	</div>
-	<script>
-
-		var session = {
-            user: "${principal.username}",
-            context: '/' + (window.location.pathname.split('/')[1])
-        };
-
-	</script>
 </div> 
