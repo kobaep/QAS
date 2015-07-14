@@ -123,12 +123,15 @@
 
         $("#save_id").submit(function() {
             var specFile = document.getElementById("spec_id").files[0];
+            var msdsFile = document.getElementById("msds_id").files[0];
+            var rohsFile = document.getElementById("rohs_id").files[0];
             if (typeof specFile == "undefined") {
-                alert("no spec file");
+                alert("add file.");
             } else {
                 var myForm = new FormData();
                 myForm.append("specFile", specFile);
-                myForm.append("specFile1", "specFile");
+                myForm.append("msdsFile", msdsFile);
+                myForm.append("rohsFile", rohsFile);
                 $.ajax({
                     url: session['context']+'/rohses/uploadspecfile',
                     data: myForm,
@@ -137,8 +140,7 @@
                     contentType: false,
                     type: 'POST',
                     success: function(data){
-                        //console.info(data)
-                        if(data=="Upload Fail"){
+                        if(data=="error"){
                             alert(false);
                         }else{
                             alert("finish.");
