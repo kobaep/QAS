@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <jsp:useBean class="java.util.Date" id="now" scope="request" />
+    <fmt:formatDate pattern="dd/MM/yyyy" value="${now}" var="default" />
+
+    <div class="row">
+        <div class="col-sm-12">
+            <ol class="breadcrumb">
+                <li>FA</li>
+                <li class="active">Engineer Approve</li>
+            </ol>
+            <form id="save_id" action="" method="POST" class="form-horizontal">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Customer :</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static text-overflow-newline" id="customer_id">Cannon</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="need_date_id">Need Date :</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static text-overflow-newline" id="need_date_id">${default}</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Part No :</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static text-overflow-newline" id="part_id">QC4-1234-5213</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="amount_id">Q'ty :</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static text-overflow-newline" id="amount_id">50,000</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Mat'l 1 :</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static text-overflow-newline" id="mat1_id">Lowvoc</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Mat'l 2 :</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static text-overflow-newline" id="mat2_id">Ruber</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Mat'l 3 :</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static text-overflow-newline" id="mat3_id">Roller</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Report Type :</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static text-overflow-newline" id="report_type_id">Inspection Data Only</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7 visible-lg visible-md visible-sm">
+                    <blockquote class="blockquote">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="drowing_id">Drawing Review</label>
+                            <div class="col-sm-8">
+                                <select id="drowing_id" name="drowing_type" class="form-control">
+                                    <option value="01">Accepted</option>
+                                    <option value="02">Rejected</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="drowing_id">Mould request</label>
+                            <div class="col-sm-8">
+                                <select id="mould_id" name="mould" class="form-control">
+                                    <option value="01">ไม่ต้องการใช้ mould</option>
+                                    <option value="02">ต้องใช้ mould</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="datemo_id">
+                            <label class="col-sm-4 control-label" for="mould_date_id">วันที่ได้รับ Mould</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <input id="mould_date_id" name="mould_date" class="form-control" autocomplete="off" placeholder="test date" value="${default}" />
+                                    <span class="input-group-btn">
+                                        <button id="btn_mould_date_id" class="btn btn-default" type="button"><span class="glyphicon glyphicon-calendar"><jsp:text/></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-2">
+                                <button id="proceed_approve" type="submit" class="btn btn-success">Approve &#160;<span class="glyphicon glyphicon-ok"><jsp:text/></span></button>
+                            </div>
+                            <div class="col-sm-offset-1 col-sm-2">
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm">Reject &#160;<span class="glyphicon glyphicon-remove"><jsp:text/></span></button>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </form>
+        </div>
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Reason</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" autocomplete="off" placeholder="Reason" size="29" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        <button type="button" id="reject_id" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        <![CDATA[
+        $(document).ready(function() {
+
+            $("#mould_date_id").datepicker({
+                format: "dd/mm/yyyy"
+            });
+
+            $("#btn_mould_date_id").click(function() {
+                $("#mould_date_id").datepicker("show").on("changeDate", function(ev){
+                    $(this).datepicker("hide");
+                });
+            });
+
+            $("#proceed_approve").click(function() {
+                window.location.href = session['context'] + '/fastatus/engview';
+                return false;
+            });
+
+            $("#reject_id").click(function() {
+                window.location.href = session['context'] + '/fastatus/engview';
+                return false;
+            });
+
+        });
+        ]]>
+    </script>
+</div>

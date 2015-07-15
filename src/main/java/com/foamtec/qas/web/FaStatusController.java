@@ -13,4 +13,19 @@ public class FaStatusController {
     public String bootstrapOther(Model uiModel) {
         return "FaStatus/status";
     }
+
+    @RequestMapping(value = "/create", produces = "text/html")
+    public String create(Model uiModel) {
+        return "FaStatus/create";
+    }
+
+    @RequestMapping(value = "/engview", produces = "text/html")
+    public String engView(Model uiModel) {
+        return "FaStatus/eng-view";
+    }
+
+    @RequestMapping(value = "/engapprove", produces = "text/html")
+    public String engApprove(Model uiModel) {
+        return "FaStatus/eng-approve";
+    }
 }

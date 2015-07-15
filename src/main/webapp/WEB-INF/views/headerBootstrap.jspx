@@ -8,6 +8,8 @@
 	<spring:url var="delta" value="/barcode/delta" />
 	<spring:url var="other" value="/barcode/other" />
 	<spring:url var="fastatus" value="/fastatus/status" />
+	<spring:url var="fastatuscreate" value="/fastatus/create" />
+	<spring:url var="engview" value="/fastatus/engview" />
 
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -44,7 +46,9 @@
 						<a href="#" class="dropdown-toggle capitalize" data-toggle="dropdown">FA</a>
 						<ul class="dropdown-menu" role="menu">
 							<li>
+								<a href="${fastatuscreate}">Create</a>
 								<a href="${fastatus}">Status</a>
+								<a href="${engview}">Engineer Preview</a>
 								<a href="#">Serch status</a>
 							</li>
 						</ul>

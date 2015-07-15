@@ -4,4 +4,13 @@
     <definition extends="foamtec" name="FaStatus/status">
         <put-attribute name="body" value="/WEB-INF/views/bootstrapPage/FaStatus/status.jspx"/>
     </definition>
+    <definition extends="foamtec" name="FaStatus/create">
+        <put-attribute name="body" value="/WEB-INF/views/bootstrapPage/FaStatus/create.jspx"/>
+    </definition>
+    <definition extends="foamtec" name="FaStatus/eng-view">
+        <put-attribute name="body" value="/WEB-INF/views/bootstrapPage/FaStatus/eng-view.jspx"/>
+    </definition>
+    <definition extends="foamtec" name="FaStatus/eng-approve">
+        <put-attribute name="body" value="/WEB-INF/views/bootstrapPage/FaStatus/eng-approve.jspx"/>
+    </definition>
 </tiles-definitions>
