@@ -23,7 +23,7 @@
                         <label class="col-sm-4 control-label" for="need_date_id">Need Date</label>
                         <div class="col-sm-8">
                             <div class="input-group">
-                                <input id="need_date_id" name="need_date" class="form-control" autocomplete="off" placeholder="test date" value="${default}" />
+                                <input id="need_date_id" name="need_date" class="form-control" autocomplete="off" placeholder="test date" value="${default}" disabled="disabled"/>
                                 <span class="input-group-btn">
                                     <button id="btn_need_date_id" class="btn btn-default" type="button"><span class="glyphicon glyphicon-calendar"><jsp:text/></span></button>
                                 </span>
@@ -64,15 +64,14 @@
                         <label class="col-sm-4 control-label" for="report_type_id">Report Type</label>
                         <div class="col-sm-8">
                             <select id="report_type_id" name="report_type" class="form-control">
-                                <option value="00">AAA</option>
-                                <option value="00">BBB</option>
-                                <option value="00">CCC</option>
+                                <option value="00">Inspection Data Only</option>
+                                <option value="01">Full packet</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-4 col-sm-8">
-                            <button id="proceed" type="submit" class="btn btn-info">Save &#160;<span class="glyphicon glyphicon-ok"><jsp:text/></span></button>
+                            <button id="proceed" type="button" class="btn btn-info">Save &#160;<span class="glyphicon glyphicon-ok"><jsp:text/></span></button>
                         </div>
                     </div>
                 </form>
@@ -81,6 +80,22 @@
                 <blockquote class="blockquote">
                     <p>FA Request</p>
                 </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ok_data" tabindex="-1" role="dialog" aria-labelledby="ok_label">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">warning</h4>
+                </div>
+                <div class="modal-body">
+                    saved successfully.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="ok_id" class="btn btn-default">OK</button>
+                </div>
             </div>
         </div>
     </div>
@@ -100,9 +115,12 @@
                 });
             });
 
-            $("#save_id").submit(function() {
+            $("#proceed").click(function() {
+                $(".ok_data").modal('show');
+            });
+
+            $("#ok_id").click(function() {
                 window.location.href = session['context'] + '/fastatus/status';
-                return false;
             });
         });
         ]]>

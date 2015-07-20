@@ -11,8 +11,8 @@
                 <li>FA</li>
                 <li class="active">Engineer Approve</li>
             </ol>
-            <form id="save_id" action="" method="POST" class="form-horizontal">
-                <div class="col-sm-5">
+            <div class="col-sm-7">
+                <form id="save_id" action="" method="POST" class="form-horizontal">
                     <div class="form-group">
                         <label class="col-sm-4 control-label">Customer :</label>
                         <div class="col-sm-8">
@@ -61,63 +61,80 @@
                             <p class="form-control-static text-overflow-newline" id="report_type_id">Inspection Data Only</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-7 visible-lg visible-md visible-sm">
-                    <blockquote class="blockquote">
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label" for="drowing_id">Drawing Review</label>
-                            <div class="col-sm-8">
-                                <select id="drowing_id" name="drowing_type" class="form-control">
-                                    <option value="01">Accepted</option>
-                                    <option value="02">Rejected</option>
-                                </select>
-                            </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-2">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target=".approve_data">Approve &#160;<span class="glyphicon glyphicon-ok"><jsp:text/></span></button>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label" for="drowing_id">Mould request</label>
-                            <div class="col-sm-8">
-                                <select id="mould_id" name="mould" class="form-control">
-                                    <option value="01">ไม่ต้องการใช้ mould</option>
-                                    <option value="02">ต้องใช้ mould</option>
-                                </select>
-                            </div>
+                        <div class="col-sm-offset-1 col-sm-2">
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".reject_data">Reject &#160;<span class="glyphicon glyphicon-remove"><jsp:text/></span></button>
                         </div>
-                        <div class="form-group" id="datemo_id">
-                            <label class="col-sm-4 control-label" for="mould_date_id">วันที่ได้รับ Mould</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
-                                    <input id="mould_date_id" name="mould_date" class="form-control" autocomplete="off" placeholder="test date" value="${default}" />
-                                    <span class="input-group-btn">
-                                        <button id="btn_mould_date_id" class="btn btn-default" type="button"><span class="glyphicon glyphicon-calendar"><jsp:text/></span></button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-2">
-                                <button id="proceed_approve" type="submit" class="btn btn-success">Approve &#160;<span class="glyphicon glyphicon-ok"><jsp:text/></span></button>
-                            </div>
-                            <div class="col-sm-offset-1 col-sm-2">
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm">Reject &#160;<span class="glyphicon glyphicon-remove"><jsp:text/></span></button>
-                            </div>
-                        </div>
-                    </blockquote>
-                </div>
-            </form>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-5 visible-lg visible-md visible-sm">
+                <blockquote class="blockquote">
+                    <p>Engineer please preview docments.</p>
+                </blockquote>
+            </div>
         </div>
-        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Reason</h4>
+    </div>
+
+    <div class="modal fade approve_data" tabindex="-1" role="dialog" aria-labelledby="approve_label">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Approve</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <form id="approve_id" action="" method="POST" class="form-horizontal">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label class="col-sm-4 control-label" for="mould_id">Mould request </label>
+                                        <div class="col-sm-8">
+                                            <select id="mould_id" name="mould_type" class="form-control">
+                                                <option value="00">ไม่ต้องการใช้ mould</option>
+                                                <option value="01">ต้องใช้ mould </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="mould_hidden_id" class="form-group hidden">
+                                        <label class="col-sm-4 control-label" for="need_date_mould_id">วันที่ได้รับ Mould</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <input id="mould_date_id" name="need_date" class="form-control" autocomplete="off" placeholder="test date" value="${default}"  disabled="disabled"/>
+                                                <span class="input-group-btn">
+                                                    <button id="btn_mould_date_id" class="btn btn-default" type="button"><span class="glyphicon glyphicon-calendar"><jsp:text/></span></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <input type="text" autocomplete="off" placeholder="Reason" size="29" />
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                        <button type="button" id="reject_id" class="btn btn-default">Submit</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button type="button" id="proceed_approve" class="btn btn-default">Approve</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade reject_data" tabindex="-1" role="dialog" aria-labelledby="reject_label">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reason</h4>
+                </div>
+                <div class="modal-body">
+                    <textarea id="reason" class="form-control" rows="3"><jsp:text/></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button type="button" id="reject_id" class="btn btn-default">Reject</button>
                 </div>
             </div>
         </div>
@@ -132,9 +149,18 @@
             });
 
             $("#btn_mould_date_id").click(function() {
+                $(".dropdown-menu").css({"z-index": "1051"}); 
                 $("#mould_date_id").datepicker("show").on("changeDate", function(ev){
                     $(this).datepicker("hide");
                 });
+            });
+
+            $("#mould_id").on("change", function() {
+                if (this.value == 01) {
+                    $("#mould_hidden_id").removeClass("hidden");
+                } else {
+                    $("#mould_hidden_id").addClass("hidden");
+                }
             });
 
             $("#proceed_approve").click(function() {
